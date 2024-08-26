@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss",
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "flex-container"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "font"
+      },
+      "declarations",
+      "rules",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "mq"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      }
+    ],
+    "scss/load-no-partial-leading-underscore": null,
+    "color-hex-length": "short",
+    "order/properties-alphabetical-order": true,
+    "scss/no-global-function-names": null,
+    "selector-class-pattern": null,
+    "prettier/prettier": true
+  }
+}
