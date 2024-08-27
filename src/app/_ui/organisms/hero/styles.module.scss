@@ -1,0 +1,24 @@
+.section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+  padding: 3rem 2rem;
+
+  .btnContainer {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+
+    a {
+      height: 4.4rem;
+
+      button {
+        align-items: center;
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '@/styles/_variables';
+@import '@/styles/_functions';
+
+.main {
+  @include flex-container(column, space-between, center);
+
+  background-color: $default-bg-color;
+}

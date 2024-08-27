@@ -1,0 +1,68 @@
+@import '@/styles/_variables';
+@import '@/styles/_functions';
+
+.footer {
+  @include flex-container(column);
+
+  background-color: #000;
+  gap: 2.4rem;
+  padding: 3.2rem;
+  width: 100%;
+
+  > hr {
+    border: none;
+    border-top: solid 0.1rem #cbd5e0;
+    width: 100%;
+  }
+
+  .policiesContainer,
+  .infoContainer {
+    display: flex;
+    padding: 2rem 0;
+    width: 100%;
+  }
+
+  .infoContainer {
+    justify-content: center;
+  }
+
+  .policiesContainer {
+    @include flex-container(column, flex-start, center);
+
+    gap: 1.6rem;
+
+    > a {
+      @include flex-container(row, flex-start, center);
+
+      color: $main-text-color-inv;
+      gap: 0.4rem;
+
+      > svg {
+        height: 1.4rem;
+        width: 1.4rem;
+      }
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    gap: 2.4rem;
+    list-style: none;
+
+    > li {
+      > a {
+        @include flex-container(row, flex-start, center);
+
+        background-color: $main-shade-300;
+        border-radius: 50%;
+        color: #fff;
+        padding: 1.4rem;
+
+        > svg {
+          height: 1.8rem;
+          width: 1.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '@/styles/_variables';
+@import '@/styles/_functions';
+
+.logo {
+  @include flex-container(row, flex-start, center);
+
+  gap: 1rem;
+
+  > img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  > span {
+    font-size: 1.75rem;
+    font-weight: 600;
+
+    &.defColor {
+      color: $main-text-color !important;
+    }
+
+    &.invColor {
+      color: $main-text-color-inv !important;
+    }
+  }
+}

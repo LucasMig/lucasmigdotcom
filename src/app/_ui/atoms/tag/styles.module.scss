@@ -1,0 +1,8 @@
+@import '@/styles/_variables';
+
+.tag {
+  background-color: $gray-100;
+  border: solid 1px $gray-700;
+  border-radius: 4rem;
+  padding: 0.5rem 1rem;
+}

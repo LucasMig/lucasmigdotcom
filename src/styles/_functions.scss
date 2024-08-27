@@ -1,0 +1,46 @@
+@import '@/styles/_variables';
+
+@function get-font($font) {
+  @return map-get($theme-fonts, $font);
+}
+
+@function get-font-size($size) {
+  @return map-get($font-sizes, $size);
+}
+
+@mixin reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin large-mobile {
+  @media (min-width: map-get($breakpoints, mobile-large)) and (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, desktop)) and (max-width: map-get($breakpoints, desktop-large)) {
+    @content;
+  }
+}
+
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
